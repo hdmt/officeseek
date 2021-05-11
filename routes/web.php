@@ -17,17 +17,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/detail', function () {
-    return view('detail');
-});
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+/**
+ * mock templates
+ */
+Route::get('/mock', function () {
+    return view('mock/index');
+});
+
+Route::get('/mock/home', function () {
+    return view('mock/home');
+});
+
+Route::get('/mock/detail', function () {
+    return view('mock/detail');
+});
+
+Route::get('/mock/list', function () {
+    return view('detail');
+});
+
