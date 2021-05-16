@@ -40,18 +40,18 @@
   </div>
 </header>
 
-<nav class="container">
-  <ol class="list-reset py-4 pl-4 rounded flex bg-grey-light text-grey">
-    <li class="px-2"><a href="#" class="no-underline text-indigo">Home</a></li>
+<nav class="container px-5 mx-auto">
+  <ol class="list-reset  rounded flex bg-grey-light text-grey">
+    <li class="px-2"><a href="#" class="no-underline text-indigo">HOME</a></li>
     <li>/</li>
-    <li class="px-2"><a href="#" class="no-underline text-indigo">Library</a></li>
+    <li class="px-2"><a href="#" class="no-underline text-indigo">エリア</a></li>
     <li>/</li>
-    <li class="px-2">Data</li>
+    <li class="px-2">オフィス名</li>
   </ol>
 </nav>
 
 <section class="text-gray-600 body-font overflow-hidden">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="container px-4 py-8 mx-auto">
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
       <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
       <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
