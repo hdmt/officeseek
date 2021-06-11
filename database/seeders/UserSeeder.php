@@ -6,8 +6,6 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use \App\Models\User;
 
-// use \App\Models\UserDetail;
-
 class UserSeeder extends Seeder
 {
     /**
@@ -18,13 +16,6 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::factory(10)->create();
-
-        // $users = \App\Models\User::where('role', 'COMPANY')->get();
-
-        DB::table('offices')->insert([
-            'office_name' => 'テストオフィス渋谷'
-        ]);
-
 
     }
 }
