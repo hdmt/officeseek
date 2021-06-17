@@ -42,13 +42,18 @@ class User extends Authenticatable
     ];
 
     /**
-     * ユーザーの詳細
+     * Userが所有するDetail
      */
     public function userDetail()
     {
         return $this->hasOne(UserDetail::class);
     }
 
+    /**
+     * Userの属するRole
+     *
+     * @return void
+     */
     public function role()
     {
         return $this->belongsTo(Role::class);

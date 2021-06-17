@@ -24,7 +24,6 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        $roles = ['SYSTEM_ADMIN','COMPANY'];
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
