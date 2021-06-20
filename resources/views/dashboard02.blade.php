@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('応募者一覧') }}
+            {{ __('求人企業一覧') }}
         </h2>
     </x-slot>
 
@@ -20,7 +20,7 @@
           <thead class="bg-gray-50">
             <tr>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                氏名
+                社名
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 応募内容
@@ -43,7 +43,7 @@
                 <div class="flex items-center">
                   <div class="ml-4">
                     <div class="text-sm font-medium text-gray-900">
-                    {{ $user->name }}
+                    {{ $user->company_name }}
                     </div>
                   </div>
                 </div>
@@ -52,10 +52,10 @@
               <a href="#" class="text-indigo-600 hover:text-indigo-900">詳細を見る</a>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-              {{ $user->email }}
+              {{ $user->contact_email }}
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
-                090-99999999
+              {{ $user->tel }}
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
               {{ $user->created_at }}

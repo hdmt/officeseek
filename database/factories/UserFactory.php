@@ -6,7 +6,6 @@ use App\Models\User;
 use App\Models\Role;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Illuminate\Support\Arr;
 
 class UserFactory extends Factory
 {
@@ -46,6 +45,20 @@ class UserFactory extends Factory
         return $this->state(function (array $attributes) {
             return [
                 'email_verified_at' => null,
+            ];
+        });
+    }
+
+    public function addAdmin()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'name' => '管理者',
+                'email' => 'tanaka@trsp.biz',
+                'email_verified_at' => now(),
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                'remember_token' => Str::random(10),
+                'role_id' => 1
             ];
         });
     }

@@ -31,4 +31,5 @@ class UserDetailFactory extends Factory
             'description' => $this->faker->realText,
         ];
     }
+
 }

@@ -2,29 +2,44 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+/**
+ * ユーザ画面
+ */
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    $data = [
+        'users' => \App\Models\User::all(),
+    ];
+    // dump($data);
+    return view('home', $data);
 });
 
+
+/**
+ * 管理画面
+ */
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $data = [
+        'users' => \App\Models\User::all(),
+    ];
+    // dump($data);
+    return view('dashboard', $data);
 })->middleware(['auth'])->name('dashboard');
+
+
+Route::get('/list/company', function () {
+    $data = [
+        'users' => \App\Models\UserDetail::all(),
+    ];
+    //  dump($data);
+    return view('dashboard02', $data);
+})->middleware(['auth']);
 
 require __DIR__.'/auth.php';
 
+
 /**
- * mock templates
+ * モック
  */
 Route::get('/mock', function () {
     return view('mock/index');
@@ -41,4 +56,3 @@ Route::get('/mock/detail', function () {
 Route::get('/mock/list', function () {
     return view('detail');
 });
-
